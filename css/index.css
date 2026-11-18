@@ -1,0 +1,59 @@
+.menu{
+   background-color: #EB726E; 
+  
+}
+
+body {
+    background-color:#FCDBAF ;
+}
+
+.container-fluid.pie-de-pagina{
+   background-color:#EB726E; 
+}
+
+
+.galeria-card {
+position: relative;
+overflow: hidden;
+border-radius: 8px;
+aspect-ratio: 4 / 3;
+}
+
+.galeria-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.galeria-card:hover img {
+    transform: scale(1.03);
+}
+
+.galeria-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+    padding: 5px 16px;
+    color: white;
+    background: linear-gradient(to top, rgb(0, 0, 0, 0.85), rgba
+    (0, 0, 0, 0));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.galeria-card:hover .galeria-overlay {
+    opacity: 1;
+}
+
+.carousel-item img {
+  filter: brightness(0.7);
+}
+
