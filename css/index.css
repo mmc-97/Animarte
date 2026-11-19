@@ -58,12 +58,5 @@ aspect-ratio: 4 / 3;
 }
 
 footer{
-   background: fixed;
-   color: black;
-   padding: 20px;
-   position: fixed;
-   width: 100%;
-   bottom: 0;
-   display: flex;
-   justify-content: center;
+    
 }
