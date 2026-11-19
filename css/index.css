@@ -64,5 +64,13 @@ footer{
 .footer.social-title{
     display: flex;
     justify-content: center;
-    
+
+}
+
+.footer.social-title a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #FCDBAF;
+    margin: 10px;
+    border-radius: 50%;
 }
