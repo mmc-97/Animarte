@@ -61,13 +61,13 @@ footer{
     background: fixed;
 
 }
-.footer.social-title{
+.footer-social-icon{
     display: flex;
     justify-content: center;
 
 }
 
-.footer.social-title a{
+.footer-social-icon a{
     text-decoration: none;
     padding: 10px;
     background-color: #FCDBAF;
