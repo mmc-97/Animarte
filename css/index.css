@@ -70,7 +70,7 @@ footer{
 .footer-social-icon a{
     text-decoration: none;
     padding: 10px;
-    background-color: #fcdbaf;
+    background-color: #fcdbafe7;
     margin: 10px;
     border-radius: 50%;
 }
@@ -78,7 +78,7 @@ footer{
 .footer-social-icon a i{
     opacity: 0.9;
     font-size: 30;
-    color:rgb(255, 255, 255)
+    color:rgba(255, 159, 103, 0.747)
    
 }
 
@@ -94,3 +94,5 @@ transition: 0,5s;
     color: white;
     transition: 5s;
 }
+
+.social title
