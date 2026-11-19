@@ -57,3 +57,12 @@ aspect-ratio: 4 / 3;
   filter: brightness(0.7);
 }
 
+footer{
+    background: fixed;
+
+}
+.footer.social-title{
+    display: flex;
+    justify-content: center;
+    
+}
