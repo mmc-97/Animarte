@@ -63,15 +63,7 @@ footer{
    padding: 20px;
    position: fixed;
    width: 100%;
-     display: flex;
+   bottom: 0;
+   display: flex;
    justify-content: center;
-   flex-direction: column;
-gap: 15px;
-
-}
-
-footer div {
-    display: flex;
-    gap: 20px;
-
 }
