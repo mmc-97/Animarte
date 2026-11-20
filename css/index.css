@@ -108,3 +108,11 @@ transition: 0.2s;
   justify-content:center
   
 }
+
+.menu .nav-link {
+  font-family: "Inder", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 20px;
+
+}
