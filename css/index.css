@@ -70,14 +70,14 @@ footer{
 .footer-social-icon a{
     text-decoration: none;
     padding: 10px;
-    background-color: #fcdbaf4b;
+    background-color: #fcdbafbb;
     margin: 10px;
     border-radius: 50%;
 }
 
 .footer-social-icon a i{
     font-size: 2em;
-    color: #ce524e;
+    color: #f0d0cf;
     opacity: 0.9;
     
    
