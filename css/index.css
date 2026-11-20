@@ -76,9 +76,9 @@ footer{
 }
 
 .footer-social-icon a i{
+    color: #EB726E;
     opacity: 0.9;
-    font-size:medium
-    color:rgba(255, 159, 103, 0.747)
+    font-size:2em
    
 }
 
@@ -95,4 +95,3 @@ transition: 0,5s;
     transition: 5s;
 }
 
-.social title
