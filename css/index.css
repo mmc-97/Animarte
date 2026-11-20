@@ -16,7 +16,7 @@ body {
 }
 
 .container-fluid.pie-de-pagina{
-   background-color:#EB726E; 
+   background-color:#FEDFB1; 
    color: wheat;
 }
 
@@ -51,7 +51,7 @@ color: rgb(212, 149, 123);
     align-items: flex-start;
     text-align: left;
     padding: 5px 16px;
-    color: rgba(255, 255, 255, 0.747);
+    color: rgba(255, 255, 255, 0.945);
     background: linear-gradient(to top, #FEDFB1, rgba
     (0, 0, 0, 0));
     opacity: 0;
@@ -120,6 +120,6 @@ transition: 0.2s;
 }
 
 .menu div ul li a{
-    color: rgb(245, 134, 83);
+    color: rgb(255, 176, 139);
 }
 
