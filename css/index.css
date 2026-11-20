@@ -120,8 +120,13 @@ transition: 0.2s;
   
 }
 
-.menu ul li a{
-    
-}
+.footer-menus ul{
+    	 text-align:right;
+    	}
+
+    	.footer-menus ul li a{
+    	 font-size:16px;
+    	}
+	
 
 
