@@ -26,7 +26,7 @@ position: relative;
 overflow: hidden;
 border-radius: 8px;
 aspect-ratio: 4 / 3;
-color: wheat;
+color: rgb(212, 149, 123);
 }
 
 .galeria-card img {
