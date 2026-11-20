@@ -70,6 +70,8 @@ aspect-ratio: 4 / 3;
 
 footer{
     background: fixed;
+    border: 3px;
+    margin: auto;
 
 }
 .footer-social-icon{
