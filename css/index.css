@@ -9,15 +9,13 @@
 }
 
 body {
-    background-color:#f7896d ;
-    
+    background-color:#FCDBAF ;
     
    
 }
 
 .container-fluid.pie-de-pagina{
-   background-color:#FEDFB1; 
-   color: wheat;
+   background-color:#EB726E; 
 }
 
 
@@ -26,7 +24,6 @@ position: relative;
 overflow: hidden;
 border-radius: 8px;
 aspect-ratio: 4 / 3;
-color: rgb(212, 149, 123);
 }
 
 .galeria-card img {
@@ -51,8 +48,8 @@ color: rgb(212, 149, 123);
     align-items: flex-start;
     text-align: left;
     padding: 5px 16px;
-    color: rgba(255, 255, 255, 0.945);
-    background: linear-gradient(to top, #FEDFB1, rgba
+    color: white;
+    background: linear-gradient(to top, rgb(0, 0, 0, 0.85), rgba
     (0, 0, 0, 0));
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -119,7 +116,7 @@ transition: 0.2s;
   
 }
 
-.menu div ul li a{
-    color: rgb(255, 176, 139);
+.menu nav ul li a{
+    color: wheat;
 }
 
