@@ -104,4 +104,5 @@ transition: 0.2s;
   font-style: normal;
   font-size: 10px;
   margin-bottom: 10px;
+  justify-content: flex-start;
 }
