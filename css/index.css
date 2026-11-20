@@ -96,7 +96,7 @@ transition: 0.2s;
     transition: 0.2s;
 }
 
-.footer-social-icon div{
+.footer-social-icon div social-title{
     background-color: white;
     padding: 20px;
     text-align: center;
