@@ -128,9 +128,13 @@ transition: 0.2s;
 
  	.footer-menus ul{
     	 text-align:center;
+          border: 3px;
+    margin: auto;
     	}
 
     	.footer-menus ul li a{
     	 font-size:16px;
+          border: 3px;
+    margin: auto;
     	}
 
