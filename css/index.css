@@ -77,7 +77,7 @@ footer{
 
 .footer-social-icon a i{
     opacity: 0.9;
-    font-size: 2em;
+    font-size:medium
     color:rgba(255, 159, 103, 0.747)
    
 }
@@ -85,7 +85,7 @@ footer{
     
 
 .footer-social-icon a:hover{
-background-color: #f5d9cc;
+background-color: #e07b4c;
 transition: 0,5s;
 
 }
