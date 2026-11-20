@@ -109,7 +109,7 @@ transition: 0.2s;
   
 }
 
-.div ul li a{
+.container-fluid.pie-de-pagina {
   font-family: "Inder", sans-serif;
   font-weight: bold;
   font-style: normal;
