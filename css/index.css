@@ -96,3 +96,8 @@ transition: 0.2s;
     transition: 0.2s;
 }
 
+.footer-social-title{
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
