@@ -7,7 +7,7 @@
   
   
 }
-.menu div ul li a{
+.menu{
 color: white;
 }
 
@@ -19,7 +19,6 @@ body {
 
 .container-fluid.pie-de-pagina{
    background-color:#EB726E; 
-   color: white;
 }
 
 
