@@ -20,7 +20,9 @@ body {
    color: #FEDFB1;
 }
 
-
+.container-fluid.pie-de-pagina ul li a{
+  color: #FEDFB1;  
+}
 .galeria-card {
 position: relative;
 overflow: hidden;
