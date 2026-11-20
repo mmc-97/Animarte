@@ -1,14 +1,15 @@
 .menu{
    background-color: #EB726E; 
+    font-family: "Inder", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 20px;
   
 }
 
 body {
     background-color:#FCDBAF ;
-    font-family: "Inder", sans-serif;
-  font-weight: bold;
-  font-style: normal;
-  font-size: 20px;
+   
 }
 
 .container-fluid.pie-de-pagina{
