@@ -51,7 +51,7 @@ color: wheat;
     align-items: flex-start;
     text-align: left;
     padding: 5px 16px;
-    color: white;
+    color: rgba(255, 255, 255, 0.63);
     background: linear-gradient(to top, rgba(255, 255, 255, 0.85), rgba
     (0, 0, 0, 0));
     opacity: 0;
