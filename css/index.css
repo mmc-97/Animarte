@@ -97,7 +97,10 @@ transition: 0.2s;
 }
 
 .social-title{
-    background-color: white;
     padding: 20px;
     text-align: center;
+    font-family: "Inder", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
 }
