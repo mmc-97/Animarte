@@ -101,8 +101,10 @@ transition: 0.2s;
     text-align: center;
     font-family: "Inder", sans-serif;
   font-weight: bold;
+  display: flex;
   font-style: normal;
   font-size: 20px;
   margin-bottom: 10px;
   justify-content:center
+  
 }
