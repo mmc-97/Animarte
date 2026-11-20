@@ -109,7 +109,7 @@ transition: 0.2s;
   
 }
 
-.menu .container-fluid.pie-de-pagina a{
+.menu .nav-item a{
   font-family: "Inder", sans-serif;
   font-weight: bold;
   font-style: normal;
