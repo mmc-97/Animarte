@@ -51,8 +51,8 @@ color: rgb(212, 149, 123);
     align-items: flex-start;
     text-align: left;
     padding: 5px 16px;
-    color: rgba(255, 255, 255, 0.637);
-    background: linear-gradient(to top, rgba(204, 122, 122, 0.85), rgba
+    color: rgba(255, 255, 255, 0.747);
+    background: linear-gradient(to top, #FEDFB1, rgba
     (0, 0, 0, 0));
     opacity: 0;
     transition: opacity 0.3s ease;
