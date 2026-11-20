@@ -10,13 +10,14 @@
 
 body {
     background-color:#FCDBAF ;
-    color: wheat;
+    
     
    
 }
 
 .container-fluid.pie-de-pagina{
    background-color:#EB726E; 
+   color: wheat;
 }
 
 
