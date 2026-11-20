@@ -130,5 +130,6 @@ transition: 0.2s;
 
     	.footer-menus ul li a{
     	 font-size:16px;
+         border-radius:none;
     	}
 
