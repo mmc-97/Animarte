@@ -121,7 +121,7 @@ transition: 0.2s;
 
 .footer-menus ul{
     	 text-align:right;
-         padding: 5;
+         padding-bottom: 5;
     	}
 
     	.footer-menus ul li a{
