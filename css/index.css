@@ -124,11 +124,11 @@ transition: 0.2s;
     color: #FEDFB1;
 }
 
-.footer-ul{
+.footer-menus{
     	 text-align:center;
     	}
 
-    	.footer-menus ul li a{
+    	.footer-menus a{
     	 font-size:16px;
          border-radius:none;
     	}
