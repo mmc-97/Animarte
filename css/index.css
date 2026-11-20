@@ -6,6 +6,9 @@
   font-size: 20px;
   
 }
+.menu ul li a{
+    color: white;
+}
 
 body {
     background-color:#FCDBAF ;
@@ -114,10 +117,4 @@ transition: 0.2s;
   
 }
 
-.div ul li a {
-  font-family: "Inder", sans-serif;
-  font-weight: bold;
-  font-style: normal;
-  font-size: 20px;
 
-}
