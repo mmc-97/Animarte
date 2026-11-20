@@ -116,7 +116,7 @@ transition: 0.2s;
   
 }
 
-.menu a{
+.menu nav ul li a{
     color: wheat;
 }
 
