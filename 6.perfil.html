@@ -1,69 +1,290 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animarte | Mi perfil</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Font Awesome (iconos) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- Fuente Inder -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet">
+  <!-- Mis estilos (siempre al final, para que pisen a Bootstrap) -->
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
-    <!--Inicio Menu-->
+<!-- Inicio menu -->
+<!-- sticky-top: el menú queda fijo arriba al hacer scroll -->
+<nav class="navbar navbar-expand-lg menu sticky-top">
+  <div class="container-fluid menu-contenido">
 
-<nav class="navbar navbar-expand-md menu">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">ANIMARTE</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- 1) Logo (izquierda) -->
+    <a class="navbar-brand" href="index.html">
+      <img src="image/Group 6.png" alt="Animarte - Inicio" class="logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-      <ul class="navbar-nav mx-5">
+
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+
+      <!-- 2) Links (centro) -->
+      <ul class="navbar-nav menu-links">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+          <a class="nav-link" href="index.html">Inicio</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Categorías
-          </a>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
           <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="3.categoría.html">Todas las categorías</a></li>
+            <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="4.1.Fotografía.html">Fotografía</a></li>
             <li><a class="dropdown-item" href="4.3.Ilustración.html">Ilustración</a></li>
             <li><a class="dropdown-item" href="4.2.AnimeyManga.html">Anime y Manga</a></li>
           </ul>
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Nosotras
-          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Notificaciones</a>
           <ul class="dropdown-menu">
-           <li><a class="dropdown-item" href="#">Ayuda</a></li>
-           <li><a class="dropdown-item" href="9.contacto.html">Contacto</a></li>
-           <li><a class="dropdown-item" href="8.sobrenotras.html">Sobre nosotras</a></li>
+            <li><a class="dropdown-item notificacion" href="5.artista.html"><i class="fa-solid fa-image me-2"></i>Mercedes subió una obra nueva</a></li>
+            <li><a class="dropdown-item notificacion" href="5.artista.html"><i class="fa-solid fa-user-plus me-2"></i>Mercedes empezó a seguirte</a></li>
+            <li><a class="dropdown-item notificacion" href="2.obra.html"><i class="fa-solid fa-comment me-2"></i>Elijah respondió tu comentario</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Nosotras</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="8.sobrenotras.html">Sobre nosotras</a></li>
+            <li><a class="dropdown-item" href="9.contacto.html">Contacto</a></li>
+            <li><a class="dropdown-item" href="10.ayuda.html">Ayuda</a></li>
           </ul>
         </li>
       </ul>
+
+      <!-- 3) Buscador + usuario (derecha) -->
+      <div class="menu-acciones">
+        <!-- Buscador (solo maquetado): la lupa queda adentro del campo -->
+        <form class="buscador" role="search" action="3.categoría.html">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input class="form-control" type="search" placeholder="Buscar obras o artistas" aria-label="Buscar">
+        </form>
+
+        <!-- Ícono de usuario con desplegable -->
+        <div class="dropdown">
+          <a href="#" class="icono-usuario active" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Mi cuenta">
+            <i class="fa-solid fa-circle-user"></i>
+            <span class="d-lg-none">Mi cuenta</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="6.perfil.html">Mi perfil</a></li>
+            <li><a class="dropdown-item" href="7.1.login.html">Iniciar sesión</a></li>
+            <li><a class="dropdown-item" href="7.2.registro.html">Crear cuenta</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="7.iniciosesion.html">Cerrar sesión</a></li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </div>
 </nav>
+<!-- Fin menu -->
 
-<!--fin menu-->
+<main>
 
+  <!-- Banner con el usuario -->
+  <section class="banner-usuario py-4">
+    <div class="container d-flex flex-column flex-sm-row align-items-center gap-3 text-center text-sm-start">
+      <!-- Avatar con la inicial. Cuando tengas la foto de Romina, cambiá este div por:
+           <img src="image/romina.jpg" alt="Foto de perfil de Romina" class="avatar-perfil"> -->
+      <div class="avatar-perfil avatar-inicial" aria-hidden="true">R</div>
+      <div class="flex-grow-1">
+        <h1 class="h3 mb-0">Romina</h1>
+        <p class="mb-0">@romina.arte · Estudiante de Artes Visuales</p>
+      </div>
+      <button type="button" class="btn btn-animarte-borde"><i class="fa-solid fa-pen me-1"></i> Editar perfil</button>
+    </div>
+  </section>
 
+  <div class="container py-5">
+    <div class="row g-4">
 
+      <!-- Sobre mí -->
+      <div class="col-md-6">
+        <section class="caja h-100">
+          <h2 class="titulo-seccion h5">Sobre mí</h2>
+          <p>Estudio Artes Visuales a la mañana y a la tarde la paso con mis hermanos. Los fines de semana me vas a encontrar en alguna cafetería con amigos, dibujando mientras charlamos y tomamos un café. ☕✏️</p>
 
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fa-solid fa-location-dot me-2"></i>Mendoza, Argentina</li>
+            <li class="mb-2"><i class="fa-solid fa-graduation-cap me-2"></i>Estudiante de Artes Visuales · 18 años</li>
+            <li><i class="fa-solid fa-calendar me-2"></i>Miembro desde noviembre 2026</li>
+          </ul>
 
+          <!-- Personalidad como "etiquetas" (badges de Bootstrap) -->
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <span class="badge etiqueta-perfil">Carismática</span>
+            <span class="badge etiqueta-perfil">Curiosa</span>
+            <span class="badge etiqueta-perfil">Divertida</span>
+          </div>
 
+          <h3 class="h6 fw-bold">Mis objetivos</h3>
+          <ul class="mb-0">
+            <li>Dedicarme al contenido de arte.</li>
+            <li>Experimentar con todo tipo de técnicas y fusionarlas para crear algo nuevo.</li>
+            <li>Colaborar con mis artistas favoritos.</li>
+          </ul>
+        </section>
+      </div>
 
-<div class="container-fluid espacio py-3">
-</div>
+      <!-- Portfolio -->
+      <div class="col-md-6">
+        <section class="caja h-100">
+          <h2 class="titulo-seccion h5">Portfolio</h2>
+          <div class="portfolio-vacio text-center p-4">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <p class="my-3">Todavía no subiste ninguna obra.</p>
+            <!-- Este botón abre el modal de abajo -->
+            <button type="button" class="btn btn-animarte" data-bs-toggle="modal" data-bs-target="#modalSubirObra">Subir obra</button>
+          </div>
+        </section>
+      </div>
+    </div>
 
-<footer>
-  
-  <div class="container-fluid pie-de-pagina p-5">
- 
+    <!-- Obras guardadas -->
+    <h2 class="titulo-seccion h4 mt-5 mb-3">Obras guardadas</h2>
+  <div class="row g-3">
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <a href="2.obra.html" class="galeria-card">
+        <img src="image/Shuichi Machimoto.jfif" alt="Shuichi Machimoto, obra de Gigi">
+        <div class="galeria-overlay">
+          <h3 class="galeria-titulo">Shuichi Machimoto</h3>
+          <p class="galeria-subtitulo">Gigi</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <a href="2.obra.html" class="galeria-card">
+        <img src="image/the_fairy_of_love_by_mmcavaller_d9qqpli (1).png" alt="El hada del amor, obra de Gigi">
+        <div class="galeria-overlay">
+          <h3 class="galeria-titulo">El hada del amor</h3>
+          <p class="galeria-subtitulo">Gigi</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <a href="2.obra.html" class="galeria-card">
+        <img src="image/cerezos.jpg" alt="Cerezos, obra de Valentina">
+        <div class="galeria-overlay">
+          <h3 class="galeria-titulo">Cerezos</h3>
+          <p class="galeria-subtitulo">Valentina</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <a href="2.obra.html" class="galeria-card">
+        <img src="image/collar.jfif" alt="Collar, obra de Lucía">
+        <div class="galeria-overlay">
+          <h3 class="galeria-titulo">Collar</h3>
+          <p class="galeria-subtitulo">Lucía</p>
+        </div>
+      </a>
+    </div>
+
+  </div>
   </div>
 
+  <!-- Modal para subir una obra (solo maquetado) -->
+  <div class="modal fade" id="modalSubirObra" tabindex="-1" aria-labelledby="tituloModalSubir" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="tituloModalSubir">Subir obra</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="archivoObra" class="form-label">Imagen</label>
+              <input type="file" class="form-control" id="archivoObra" accept="image/*">
+            </div>
+            <div class="mb-3">
+              <label for="tituloObra" class="form-label">Título</label>
+              <input type="text" class="form-control" id="tituloObra">
+            </div>
+            <div class="mb-3">
+              <label for="categoriaObra" class="form-label">Categoría</label>
+              <select class="form-select" id="categoriaObra">
+                <option>Fotografía</option>
+                <option>Ilustración</option>
+                <option>Anime y Manga</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="descripcionObra" class="form-label">Descripción</label>
+              <textarea class="form-control" id="descripcionObra" rows="3"></textarea>
+            </div>
+            <div class="mb-1">
+              <label for="precioObra" class="form-label">Precio (opcional)</label>
+              <div class="input-group">
+                <span class="input-group-text">$</span>
+                <input type="number" class="form-control" id="precioObra" min="0">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-animarte-borde" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-animarte" data-bs-dismiss="modal">Publicar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- Inicio footer -->
+<footer class="pie-de-pagina py-4">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <div class="col-md-4 text-center text-md-start">
+        <a href="index.html"><img src="image/Group 6.png" alt="Animarte - Inicio" class="logo-footer"></a>
+      </div>
+      <div class="col-md-4">
+        <ul class="footer-menus">
+          <li><a href="8.sobrenotras.html">Sobre nosotras</a></li>
+          <li><a href="9.contacto.html">Contacto</a></li>
+          <li><a href="10.ayuda.html">Ayuda</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <div class="footer-social-icon justify-content-md-end">
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="text-center small mt-4 mb-0">
+      © 2026 Animarte · <a href="#">Política de privacidad</a> · <a href="#">Términos y condiciones</a>
+    </p>
+  </div>
 </footer>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<!-- Fin footer -->
+
+<!-- JS de Bootstrap (necesario para el menú, los desplegables, el carrusel y los modales) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

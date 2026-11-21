@@ -1,136 +1,577 @@
-.menu{
-   background-color: #EB726E;
-  font-family: "Inder", sans-serif;
-  font-weight: bold;
-  font-style: normal;
-  font-size: 20px;
-  color: #FEDFB1;
-  
-  
+/* =========================================================
+   ANIMARTE - Hoja de estilos general
+   La usan TODAS las páginas del sitio.
+   ========================================================= */
+
+/* ===== Colores del sitio =====
+   Los guardo como variables para cambiarlos en un solo lugar */
+:root {
+  --coral: #EB726E;
+  --coral-oscuro: #b94a46;
+  --crema: #FCDBAF;
+  --crema-claro: #FEDFB1;
+  --blanco-calido: #fff8ee;
+  --naranja: #e07b4c;
+  --texto: #4a3431;
 }
 
+/* ===== Base ===== */
+/* body en columna + main con flex:1 = el footer siempre queda abajo,
+   aunque la página tenga poco contenido */
 body {
-    background-color:#FCDBAF ;
-    
-   
+  background-color: var(--crema);
+  color: var(--texto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.container-fluid.pie-de-pagina{
-   background-color:#EB726E; 
-   color: #FEDFB1;
+main {
+  flex: 1;
 }
 
+h1, h2, h3, h4, h5,
+.btn {
+  font-family: "Inder", sans-serif;
+}
 
+.titulo-seccion {
+  font-weight: bold;
+  color: var(--coral-oscuro);
+}
 
+.link-animarte {
+  color: var(--coral-oscuro);
+  font-weight: bold;
+}
+
+.link-animarte:hover {
+  color: var(--naranja);
+}
+
+/* Caja clara con sombra (la uso en muchas páginas) */
+.caja {
+  background-color: var(--blanco-calido);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Botones propios ===== */
+.btn-animarte {
+  background-color: var(--coral);
+  color: white;
+  border: 2px solid var(--coral);
+  border-radius: 24px;
+  padding: 8px 24px;
+}
+
+.btn-animarte:hover,
+.btn-animarte:focus {
+  background-color: var(--naranja);
+  border-color: var(--naranja);
+  color: white;
+}
+
+.btn-animarte-borde {
+  background-color: transparent;
+  color: var(--coral-oscuro);
+  border: 2px solid var(--coral);
+  border-radius: 24px;
+  padding: 8px 24px;
+}
+
+.btn-animarte-borde:hover,
+.btn-animarte-borde:focus {
+  background-color: var(--coral);
+  color: white;
+}
+
+/* Inputs: cambio el azul de Bootstrap por el coral */
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: var(--coral);
+  box-shadow: 0 0 0 0.25rem rgba(235, 114, 110, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: var(--coral);
+  border-color: var(--coral);
+}
+
+/* ===== Menú (header) ===== */
+.menu {
+  background-color: white;
+  font-family: "Inder", sans-serif;
+  font-size: 17px;
+  border-bottom: 4px solid var(--coral); /* línea de color para que no quede "pelado" */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+/* En compu (pantallas de 992px o más) armo el header en 3 columnas:
+   logo | links | buscador + usuario
+   Las columnas de los costados miden lo mismo (1fr), así los links quedan
+   justo en el centro. "display: contents" hace que lo que está adentro del
+   collapse se ubique directo en la grilla. */
+@media (min-width: 992px) {
+  .menu-contenido {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+  }
+
+  .menu .navbar-collapse {
+    display: contents !important;
+  }
+
+  .menu-acciones {
+    justify-self: end;
+  }
+
+  .menu-links {
+    gap: 8px;
+  }
+}
+
+/* Bootstrap le pone color propio a .nav-link, por eso hay que apuntarle directo */
+.menu .nav-link {
+  color: var(--texto);
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 20px;
+}
+
+.menu .nav-link:hover,
+.menu .nav-link.show {
+  color: var(--coral-oscuro);
+  background-color: var(--blanco-calido);
+}
+
+/* La sección en la que estás queda marcada */
+.menu .nav-link.active {
+  color: white;
+  background-color: var(--coral);
+}
+
+/* El PNG del logo tiene mucho espacio vacío a los costados:
+   con object-fit: cover lo recorto sin deformarlo */
+.logo {
+  width: 190px;
+  height: 56px;
+  object-fit: cover;
+}
+
+.menu .dropdown-menu {
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.dropdown-item:active {
+  background-color: var(--coral);
+}
+
+.notificacion {
+  white-space: normal;
+  min-width: 260px;
+}
+
+/* Parte derecha: buscador + usuario */
+.menu-acciones {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Buscador con la lupa adentro del campo */
+.buscador {
+  position: relative;
+  width: 260px;
+}
+
+.buscador i {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--coral);
+}
+
+.buscador .form-control {
+  padding-left: 38px;
+  border-radius: 20px;
+  background-color: var(--blanco-calido);
+  border: 1px solid #ecd9c3;
+}
+
+.icono-usuario {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 34px;
+  line-height: 1;
+  color: var(--coral);
+  text-decoration: none;
+}
+
+.icono-usuario span {
+  font-size: 17px;
+  color: var(--texto);
+}
+
+.icono-usuario:hover,
+.icono-usuario.active {
+  color: var(--coral-oscuro);
+}
+
+/* Menú simple (login y registro) */
+.link-volver {
+  color: var(--texto);
+  text-decoration: none;
+}
+
+.link-volver:hover {
+  color: var(--coral-oscuro);
+}
+
+/* En celular y tablet (menú desplegado) todo va uno debajo del otro */
+@media (max-width: 991px) {
+  .menu-links {
+    padding: 12px 0;
+  }
+
+  .menu-acciones {
+    flex-direction: column;
+    align-items: stretch;
+    padding-bottom: 12px;
+  }
+
+  .buscador {
+    width: 100%;
+  }
+}
+
+/* ===== Galería ===== */
 .galeria-card {
-position: relative;
-overflow: hidden;
-border-radius: 8px;
-aspect-ratio: 4 / 3;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 4 / 3;
 }
 
 .galeria-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
 .galeria-card:hover img {
-    transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 .galeria-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    text-align: left;
-    padding: 5px 16px;
-    color: white;
-    background: linear-gradient(to top, rgb(0, 0, 0, 0.85), rgba
-    (0, 0, 0, 0));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 8px 16px;
+  color: white;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .galeria-card:hover .galeria-overlay {
-    opacity: 1;
+  opacity: 1;
 }
 
-.carousel-item img {
-  filter: brightness(0.7);
+.galeria-titulo {
+  margin: 0;
+  font-size: 18px;
 }
 
-footer{
-    background: fixed;
-
-}
-.footer-social-icon{
-    display: flex;
-    justify-content: center;
-
+.galeria-subtitulo {
+  margin: 0;
+  font-size: 14px;
 }
 
-.footer-social-icon a{
-    text-decoration: none;
-    padding: 10px;
-    background-color: #fcdbafbb;
-    margin: 10px;
-    border-radius: 50%;
+/* ===== Carrusel ===== */
+.carrusel-img {
+  height: 500px;
+  object-fit: cover;
+  filter: brightness(0.6); /* oscurece la foto para que se lea el texto */
 }
 
-.footer-social-icon a i{
-    font-size: 2em;
-    color: #e67d79;
-    opacity: 1;
-    
-   
+.carrusel-img.arriba {
+  object-position: top;
 }
 
-    
-
-.footer-social-icon a:hover{
-background-color: #e07b4c;
-transition: 0.2s;
-
+/* ===== Categorías ===== */
+.categoria-card {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  aspect-ratio: 3 / 4;
+  text-decoration: none;
 }
 
-.footer-social-icon a:hover i{
-    color: white;
-    transition: 0.2s;
+.categoria-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.65);
+  transition: transform 0.3s ease;
 }
 
-.footer-social-icon .social-title{
-    color: white;
-    text-align: center;
-    font-family: "Inder", sans-serif;
+.categoria-card:hover img {
+  transform: scale(1.05);
+}
+
+.categoria-card h2 {
+  position: absolute;
+  inset: auto 0 24px 0;
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+
+/* ===== Obra ===== */
+.obra-img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+}
+
+.btn-accion {
+  background-color: var(--blanco-calido);
+  color: var(--texto);
+  border-radius: 24px;
+}
+
+.btn-accion:hover {
+  background-color: white;
+  color: var(--coral-oscuro);
+}
+
+.comentario {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.avatar-comentario {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0; /* para que la foto no se achique */
+}
+
+.comentario .nombre {
+  color: var(--coral-oscuro);
   font-weight: bold;
-  display: flex;
-  font-style: normal;
-  font-size: 20px;
-  margin-bottom: 10px;
-  justify-content:center
-  
+  margin-bottom: 4px;
 }
 
-.footer-menus ul{
-    	 text-align:right;
-         padding-bottom: 5px;
-    	}
+.comentario .nombre span {
+  font-size: 12px;
+  font-weight: normal;
+  color: #7a6461;
+  margin-left: 8px;
+}
 
-    	.footer-menus ul li a{
-    	 font-size:16px;
-         color: #d17972;
-    	}
-	.footer-menus ul{
-       background: fixed;
+.comentario .botones a {
+  color: #7a6461;
+  font-size: 13px;
+  margin-left: 16px;
+}
 
-    }
+/* ===== Perfiles ===== */
+.avatar-grande {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+}
 
+.etiqueta {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: var(--coral-oscuro);
+}
 
+.dato-numero {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.avatar-perfil {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  flex-shrink: 0;
+}
+
+/* Círculo con la inicial (mientras no haya foto) */
+.avatar-inicial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--coral);
+  color: white;
+  font-family: "Inder", sans-serif;
+  font-size: 40px;
+}
+
+.etiqueta-perfil {
+  background-color: var(--crema);
+  color: var(--coral-oscuro);
+  font-size: 14px;
+  font-weight: normal;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.banner-usuario {
+  background-color: var(--crema-claro);
+  border-bottom: 2px solid rgba(235, 114, 110, 0.3);
+}
+
+.portfolio-vacio {
+  border: 2px dashed var(--coral);
+  border-radius: 12px;
+}
+
+.portfolio-vacio i {
+  font-size: 48px;
+  color: var(--coral);
+}
+
+/* ===== Login y registro ===== */
+.caja-form {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.logo-form {
+  width: 240px;
+  height: 70px;
+  object-fit: cover;
+}
+
+/* ===== Sobre nosotras ===== */
+.portada {
+  background-color: var(--coral);
+  color: white;
+}
+
+.icono-objetivo {
+  font-size: 40px;
+  color: var(--coral);
+}
+
+/* ===== Ayuda (acordeón) ===== */
+.accordion-button:not(.collapsed) {
+  background-color: var(--crema-claro);
+  color: var(--texto);
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(235, 114, 110, 0.25);
+}
+
+/* ===== Footer ===== */
+.pie-de-pagina {
+  background-color: white;
+  color: var(--texto);
+  border-top: 4px solid var(--coral);
+}
+
+.logo-footer {
+  width: 180px;
+  height: 54px;
+  object-fit: cover;
+}
+
+.footer-social-icon {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-social-icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--crema);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.footer-social-icon a i {
+  font-size: 20px;
+  color: var(--coral-oscuro);
+  transition: color 0.2s;
+}
+
+.footer-social-icon a:hover {
+  background-color: var(--coral);
+}
+
+.footer-social-icon a:hover i {
+  color: white;
+}
+
+.footer-menus {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.pie-de-pagina a {
+  color: var(--texto);
+}
+
+.pie-de-pagina a:hover {
+  color: var(--coral-oscuro);
+}
+/* ===== Celular ===== */
+@media (max-width: 767px) {
+  .carrusel-img {
+    height: 300px;
+  }
+  .carousel-caption h5 {
+    font-size: 16px;
+  }
+  .carousel-caption p {
+    font-size: 13px;
+  }
+  .caja {
+    padding: 20px;
+  }
+}
