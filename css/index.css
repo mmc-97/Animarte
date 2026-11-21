@@ -1,10 +1,4 @@
-/* =========================================================
-   ANIMARTE - Hoja de estilos general
-   La usan TODAS las páginas del sitio.
-   ========================================================= */
 
-/* ===== Colores del sitio =====
-   Los guardo como variables para cambiarlos en un solo lugar */
 :root {
   --coral: #EB726E;
   --coral-oscuro: #b94a46;
@@ -15,9 +9,6 @@
   --texto: #4a3431;
 }
 
-/* ===== Base ===== */
-/* body en columna + main con flex:1 = el footer siempre queda abajo,
-   aunque la página tenga poco contenido */
 body {
   background-color: var(--crema);
   color: var(--texto);
@@ -49,7 +40,6 @@ h1, h2, h3, h4, h5,
   color: var(--naranja);
 }
 
-/* Caja clara con sombra (la uso en muchas páginas) */
 .caja {
   background-color: var(--blanco-calido);
   border-radius: 16px;
@@ -57,7 +47,6 @@ h1, h2, h3, h4, h5,
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* ===== Botones propios ===== */
 .btn-animarte {
   background-color: var(--coral);
   color: white;
@@ -87,7 +76,6 @@ h1, h2, h3, h4, h5,
   color: white;
 }
 
-/* Inputs: cambio el azul de Bootstrap por el coral */
 .form-control:focus,
 .form-select:focus,
 .form-check-input:focus {
@@ -100,22 +88,16 @@ h1, h2, h3, h4, h5,
   border-color: var(--coral);
 }
 
-/* ===== Menú (header) ===== */
 .menu {
   background-color: white;
   font-family: "Inder", sans-serif;
   font-size: 17px;
-  border-bottom: 4px solid var(--coral); /* línea de color para que no quede "pelado" */
+  border-bottom: 4px solid var(--coral);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   padding-top: 6px;
   padding-bottom: 6px;
 }
 
-/* En compu (pantallas de 992px o más) armo el header en 3 columnas:
-   logo | links | buscador + usuario
-   Las columnas de los costados miden lo mismo (1fr), así los links quedan
-   justo en el centro. "display: contents" hace que lo que está adentro del
-   collapse se ubique directo en la grilla. */
 @media (min-width: 992px) {
   .menu-contenido {
     display: grid;
@@ -136,7 +118,6 @@ h1, h2, h3, h4, h5,
   }
 }
 
-/* Bootstrap le pone color propio a .nav-link, por eso hay que apuntarle directo */
 .menu .nav-link {
   color: var(--texto);
   padding-left: 12px;
@@ -150,14 +131,11 @@ h1, h2, h3, h4, h5,
   background-color: var(--blanco-calido);
 }
 
-/* La sección en la que estás queda marcada */
 .menu .nav-link.active {
   color: white;
   background-color: var(--coral);
 }
 
-/* El PNG del logo tiene mucho espacio vacío a los costados:
-   con object-fit: cover lo recorto sin deformarlo */
 .logo {
   width: 190px;
   height: 56px;
@@ -180,14 +158,12 @@ h1, h2, h3, h4, h5,
   min-width: 260px;
 }
 
-/* Parte derecha: buscador + usuario */
 .menu-acciones {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-/* Buscador con la lupa adentro del campo */
 .buscador {
   position: relative;
   width: 260px;
@@ -228,7 +204,6 @@ h1, h2, h3, h4, h5,
   color: var(--coral-oscuro);
 }
 
-/* Menú simple (login y registro) */
 .link-volver {
   color: var(--texto);
   text-decoration: none;
@@ -238,7 +213,6 @@ h1, h2, h3, h4, h5,
   color: var(--coral-oscuro);
 }
 
-/* En celular y tablet (menú desplegado) todo va uno debajo del otro */
 @media (max-width: 991px) {
   .menu-links {
     padding: 12px 0;
@@ -255,7 +229,6 @@ h1, h2, h3, h4, h5,
   }
 }
 
-/* ===== Galería ===== */
 .galeria-card {
   display: block;
   position: relative;
@@ -304,18 +277,16 @@ h1, h2, h3, h4, h5,
   font-size: 14px;
 }
 
-/* ===== Carrusel ===== */
 .carrusel-img {
   height: 500px;
   object-fit: cover;
-  filter: brightness(0.6); /* oscurece la foto para que se lea el texto */
+  filter: brightness(0.6);
 }
 
 .carrusel-img.arriba {
   object-position: top;
 }
 
-/* ===== Categorías ===== */
 .categoria-card {
   display: block;
   position: relative;
@@ -345,7 +316,6 @@ h1, h2, h3, h4, h5,
   margin: 0;
 }
 
-/* ===== Obra ===== */
 .obra-img {
   width: 100%;
   max-height: 600px;
@@ -376,7 +346,7 @@ h1, h2, h3, h4, h5,
   height: 56px;
   object-fit: cover;
   border-radius: 50%;
-  flex-shrink: 0; /* para que la foto no se achique */
+  flex-shrink: 0;
 }
 
 .comentario .nombre {
@@ -398,7 +368,6 @@ h1, h2, h3, h4, h5,
   margin-left: 16px;
 }
 
-/* ===== Perfiles ===== */
 .avatar-grande {
   width: 150px;
   height: 150px;
@@ -429,7 +398,6 @@ h1, h2, h3, h4, h5,
   flex-shrink: 0;
 }
 
-/* Círculo con la inicial (mientras no haya foto) */
 .avatar-inicial {
   display: flex;
   align-items: center;
@@ -464,7 +432,6 @@ h1, h2, h3, h4, h5,
   color: var(--coral);
 }
 
-/* ===== Login y registro ===== */
 .caja-form {
   max-width: 440px;
   margin: 0 auto;
@@ -476,7 +443,6 @@ h1, h2, h3, h4, h5,
   object-fit: cover;
 }
 
-/* ===== Sobre nosotras ===== */
 .portada {
   background-color: var(--coral);
   color: white;
@@ -487,7 +453,6 @@ h1, h2, h3, h4, h5,
   color: var(--coral);
 }
 
-/* ===== Ayuda (acordeón) ===== */
 .accordion-button:not(.collapsed) {
   background-color: var(--crema-claro);
   color: var(--texto);
@@ -497,7 +462,6 @@ h1, h2, h3, h4, h5,
   box-shadow: 0 0 0 0.25rem rgba(235, 114, 110, 0.25);
 }
 
-/* ===== Footer ===== */
 .pie-de-pagina {
   background-color: white;
   color: var(--texto);
@@ -560,7 +524,6 @@ h1, h2, h3, h4, h5,
 .pie-de-pagina a:hover {
   color: var(--coral-oscuro);
 }
-/* ===== Celular ===== */
 @media (max-width: 767px) {
   .carrusel-img {
     height: 300px;
