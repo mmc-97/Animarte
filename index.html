@@ -15,7 +15,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg menu sticky-top">
-  <div class="container-fluid menu-contenido">
+  <div class="container-fluid">
 
     <a class="navbar-brand" href="index.html">
       <img src="image/Group 6.png" alt="Animarte - Inicio" class="logo">
@@ -27,7 +27,7 @@
 
     <div class="collapse navbar-collapse" id="menuPrincipal">
 
-      <ul class="navbar-nav menu-links">
+      <ul class="navbar-nav mx-lg-auto gap-lg-2 py-3 py-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
         </li>
@@ -59,14 +59,14 @@
         </li>
       </ul>
 
-      <div class="menu-acciones">
-        <form class="buscador" role="search" action="3.categoría.html">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input class="form-control" type="search" placeholder="Buscar obras o artistas" aria-label="Buscar">
+      <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-3 pb-3 pb-lg-0">
+        <form class="buscador position-relative" role="search" action="3.categoría.html">
+          <i class="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+          <input class="form-control ps-5 rounded-pill" type="search" placeholder="Buscar obras o artistas" aria-label="Buscar">
         </form>
 
         <div class="dropdown">
-          <a href="#" class="icono-usuario" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Mi cuenta">
+          <a href="#" class="icono-usuario d-flex align-items-center gap-2 text-decoration-none" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Mi cuenta">
             <i class="fa-solid fa-circle-user"></i>
             <span class="d-lg-none">Mi cuenta</span>
           </a>
@@ -334,9 +334,9 @@
 </section>
 
 
-<section class="pb-5">
-  <h2 class="titulo-seccion h3 mb-4 px-3">Noticias</h2>
-  <div id="carouselNoticias" class="carousel slide" data-bs-ride="carousel">
+<section class="container pb-5">
+  <h2 class="titulo-seccion h3 mb-4">Noticias</h2>
+  <div id="carouselNoticias" class="carousel slide rounded-4 overflow-hidden" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselNoticias" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Noticia 1"></button>
       <button type="button" data-bs-target="#carouselNoticias" data-bs-slide-to="1" aria-label="Noticia 2"></button>
@@ -344,24 +344,30 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="image/Absolute-Batman.jpg" class="d-block w-100 carrusel-img" alt="Absolute Batman">
+        <div class="ratio ratio-16x9">
+          <img src="image/Absolute-Batman.jpg" class="d-block w-100 object-fit-cover carrusel-img" alt="Absolute Batman">
+        </div>
         <div class="carousel-caption">
-          <h5>Absolute Batman tendrá su propia serie de animación</h5>
-          <p>La versión del murciélago más oscura y sus villanos más despiadados.</p>
+          <h5 class="mb-1 mb-sm-2">Absolute Batman tendrá su propia serie de animación</h5>
+          <p class="d-none d-sm-block">La versión del murciélago más oscura y sus villanos más despiadados.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="image/jose-lardone-cuadro-foto-linda.jpg" class="d-block w-100 carrusel-img" alt="Cuadro de José Lardone">
+        <div class="ratio ratio-16x9">
+          <img src="image/jose-lardone-cuadro-foto-linda.jpg" class="d-block w-100 object-fit-cover carrusel-img" alt="Cuadro de José Lardone">
+        </div>
         <div class="carousel-caption">
-          <h5>Artista mendocino pintó en la Cordillera de los Andes</h5>
-          <p>José Lardone utilizó vino Malbec y agua de un río para realizar un cuadro en homenaje al Ejército de San Martín.</p>
+          <h5 class="mb-1 mb-sm-2">Artista mendocino pintó en la Cordillera de los Andes</h5>
+          <p class="d-none d-sm-block">José Lardone utilizó vino Malbec y agua de un río para realizar un cuadro en homenaje al Ejército de San Martín.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="image/fable.jpeg" class="d-block w-100 carrusel-img arriba" alt="Fable">
+        <div class="ratio ratio-16x9">
+          <img src="image/fable.jpeg" class="d-block w-100 object-fit-cover carrusel-img arriba" alt="Fable">
+        </div>
         <div class="carousel-caption">
-          <h5>Fable muestra nuevos avances</h5>
-          <p>Su apartado visual se vuelve fotorrealista.</p>
+          <h5 class="mb-1 mb-sm-2">Fable muestra nuevos avances</h5>
+          <p class="d-none d-sm-block">Su apartado visual se vuelve fotorrealista.</p>
         </div>
       </div>
     </div>
@@ -385,14 +391,14 @@
         <a href="index.html"><img src="image/Group 6.png" alt="Animarte - Inicio" class="logo-footer"></a>
       </div>
       <div class="col-md-4">
-        <ul class="footer-menus">
+        <ul class="list-unstyled d-flex flex-wrap justify-content-center column-gap-4 row-gap-2 mb-0">
           <li><a href="8.sobrenotras.html">Sobre nosotras</a></li>
           <li><a href="9.contacto.html">Contacto</a></li>
           <li><a href="10.ayuda.html">Ayuda</a></li>
         </ul>
       </div>
       <div class="col-md-4">
-        <div class="footer-social-icon justify-content-md-end">
+        <div class="footer-social-icon d-flex flex-wrap justify-content-center gap-2 justify-content-md-end">
           <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
           <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
